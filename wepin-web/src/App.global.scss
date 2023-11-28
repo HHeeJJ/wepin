@@ -1,0 +1,78 @@
+@use "./assets/styles/scss/reset";
+@use "./assets/styles/scss/variables" as *;
+
+html,
+body,
+#root,
+#contents {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contentsArea {
+  height: 100%;
+  overflow-y: auto;
+
+  .innerWrap {
+    padding: rem(20) rem(16);
+  }
+}
+
+.section {
+  padding: rem(16);
+}
+
+/* Drawer */
+.MuiDrawer-root {
+  .drawerTitleArea {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(52);
+    padding: 0 rem(16);
+    .title {
+      font-size: rem(16);
+      font-weight: 600;
+    }
+    button {
+      margin-right: -4px;
+    }
+  }
+}
+
+/* Modal */
+.fullPageModal {
+  height: 100%;
+
+  .modalConWrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+
+    .modalTitleArea {
+      flex-shrink: 0;
+      position: relative;
+      text-align: center;
+      font-size: rem(18);
+      font-weight: 600;
+      line-height: rem(52);
+
+      .btnClose {
+        position: absolute;
+        top: 50%;
+        right: rem(14);
+        transform: translateY(-50%);
+      }
+    }
+
+    .modalContents {
+      height: 100%;
+      overflow-y: auto;
+      padding: rem(6) rem(16);
+    }
+  }
+}

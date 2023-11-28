@@ -1,0 +1,26 @@
+@use "../../../assets/styles/scss/functions" as *;
+
+#header {
+  flex-shrink: 0;
+  height: rem(52);
+  padding: 0 rem(16);
+  background: #fff;
+
+  .headerWrap {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: rem(18);
+    font-weight: 700;
+
+    &.logo {
+      font-size: rem(22);
+    }
+  }
+}

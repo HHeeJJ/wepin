@@ -1,0 +1,46 @@
+@use "../../../assets/styles/scss/functions" as *;
+
+.feedList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    width: calc(50% - rem(4));
+    margin-top: rem(4);
+    border: 1px solid rgba(28, 28, 28, 0.05);
+    cursor: pointer;
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+
+    .previewMap {
+      position: relative;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .pinInfo {
+      padding: rem(8);
+      font-size: rem(14);
+
+      .subject {
+        display: block;
+        font-weight: 500;
+      }
+
+      .count {
+        display: block;
+        margin-top: rem(4);
+        color: #a7a7a7;
+      }
+    }
+  }
+}

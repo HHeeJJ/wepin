@@ -1,0 +1,224 @@
+@use '../../assets/styles/scss/functions' as *;
+@use '../../assets/styles/scss/variables' as *;
+
+#makePinContents {
+    .MuiPaper-root {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px !important;
+        overflow: hidden;
+    }
+
+    .contentsWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+
+        .makePinConArea,
+        .section {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        /* 페이지 타이틀 */
+        .modalTitleArea {
+            flex-shrink: 0;
+            height: rem(52);
+            padding: 0 rem(16);
+            background: #fff;
+
+            .titleWrap {
+                position: relative;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .title {
+                font-size: rem(18);
+                font-weight: 600;
+            }
+
+            .btnClose {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+
+            .btnBack {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        h3 {
+            margin-bottom: rem(16);
+            font-size: rem(16);
+            font-weight: 600;
+        }
+
+        /* 위치 설정하기 */
+        .schLocArea {
+            flex-shrink: 0;
+            padding: rem(16) rem(16) 0 rem(16);
+
+            .btnSetCurrentLocation {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: rem(14) 0 rem(12);
+                font-size: rem(14);
+                svg {
+                    &:first-child {
+                        margin-right: rem(4);
+                    }
+                }
+            }
+        }
+
+        /* 위치 설정 검색 안내 */
+        .searchGuide {
+            dl {
+                margin-top: rem(12);
+                font-size: rem(14);
+                &:first-child {
+                    margin-top: 0;
+                }
+                dd {
+                    margin-top: rem(4);
+                    color: #9f9f9f;
+                }
+            }
+        }
+
+        /* 위치 설정 검색 리스트 */
+        .schLocListWrap {
+            flex-grow: 1;
+            padding: rem(24) rem(16);
+            overflow-y: auto;
+
+            .schWord {
+                margin-bottom: rem(20);
+                font-size: rem(14);
+                b {
+                    font-weight: 600;
+                    color: $c-primary;
+                }
+            }
+
+            .schLocList {
+                li {
+                    margin-top: rem(20);
+                    font-size: rem(14);
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    b {
+                        font-weight: 400;
+                        color: $c-primary;
+                    }
+                    p {
+                        margin-bottom: rem(4);
+                        font-size: rem(15);
+                    }
+                    span {
+                        display: block;
+                        color: #a7a7a7;
+                    }
+                }
+            }
+        }
+
+        /* 핀 목록 추가 */
+        .btnAddPinList {
+            display: flex;
+
+            p {
+                padding-left: rem(4);
+                text-align: left;
+                strong {
+                    display: block;
+                    padding-top: 2px;
+                    font-size: rem(16);
+                }
+                span {
+                    display: block;
+                    padding-top: 2px;
+                    font-size: rem(14);
+                    color: #a7a7a7;
+                }
+            }
+
+            &:disabled,
+            &.c_gray {
+                color: #a7a7a7;
+            }
+        }
+
+        /* 핀 미리보기 */
+        .previewMyPinArea {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+
+            .mapArea {
+                position: relative;
+                flex-grow: 1;
+                overflow: hidden;
+
+                .btnMyPinModify {
+                    position: absolute;
+                    right: rem(16);
+                    bottom: 30px;
+                    height: rem(36);
+                    padding: 0 rem(12);
+                    border-radius: 40px;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08) !important;
+                    z-index: 6;
+                }
+            }
+
+            .formArea {
+                & > .MuiFormControl-root {
+                    margin-top: rem(24);
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+                textarea {
+                    padding: rem(12);
+                    border-radius: 4px;
+                    border: 1px solid #ebebeb;
+                    font-size: rem(16);
+                    resize: none;
+                    line-height: 1.36;
+
+                    &::placeholder {
+                        color: #ababab;
+                    }
+
+                    &:focus {
+                        border-color: #222;
+                    }
+                }
+            }
+
+            .section {
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+        }
+    }
+}

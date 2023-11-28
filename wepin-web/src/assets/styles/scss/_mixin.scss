@@ -1,0 +1,69 @@
+/// 공통 믹스인들
+
+/// Typography guide
+@mixin font-h1 {
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+}
+
+@mixin font-h2 {
+  font-size: 1.375rem; // 22px
+  line-height: 1.875rem; // 30px
+}
+
+/// 요소의 크기를 설정하는 헬퍼
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// text hide
+@mixin textHidden {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/// whitespace text
+@mixin textEllipsis {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/// input:number  설정
+@mixin numInput {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+// Breakpoints
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+
+// media query
+@mixin mobileSmall {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}

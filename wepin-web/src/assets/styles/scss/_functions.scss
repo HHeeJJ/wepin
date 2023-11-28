@@ -1,0 +1,20 @@
+/// 공통 함수들
+
+/// utf-8 URL
+/// @see 'https://yoksel.github.io/url-encoder/'
+/// @param {String} $str utf8 로 되어 있는 URL 문자열
+@function getUtf8Url($str) {
+    @return 'data:image/svg+xml;charset=utf8,#{$str}';
+}
+
+/// HEX 컬러의 # 기호를 유니코드로 치환
+/// @param {String} $color 컬러값
+@function getUtf8Color($color) {
+    @return '%23#{$color}';
+}
+
+/// px >> rem 으로 변환
+@function rem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+}

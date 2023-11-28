@@ -1,0 +1,67 @@
+$baseURL: "/src";
+$baseImg: $baseURL + "/img";
+
+//디폴트 컨텐츠 좌우 여백
+$InnerPadding: 1.5rem;
+
+//색상
+$c-default: #212121;
+$c-red: #ff4f4f;
+
+//Primary
+$c-primary: #297fff;
+$c-secondary: #ebe6f9;
+
+//Gray Scale
+$c-gray: #949494;
+
+//font-size
+$fz-mid: 14px;
+$fz-mid-s: 12px;
+$fz-mid-ss: 10px;
+
+// flex
+.flex-1 {
+  flex: 1;
+}
+
+*[class~="flex"],
+*[class*="flex"] {
+  display: flex;
+
+  &[class*="jcc"] {
+    justify-content: center;
+  }
+
+  &[class*="jcs"] {
+    justify-content: flex-start;
+  }
+
+  &[class*="jce"] {
+    justify-content: flex-end;
+  }
+
+  &[class*="jcsb"] {
+    justify-content: space-between;
+  }
+
+  &[class*="itmfs"] {
+    align-items: flex-start;
+  }
+
+  &[class*="itmc"] {
+    align-items: center;
+  }
+
+  &[class*="itmfe"] {
+    align-items: center;
+  }
+
+  &[class*="itmfe2"] {
+    align-items: flex-end;
+  }
+
+  &.col {
+    flex-direction: column;
+  }
+}

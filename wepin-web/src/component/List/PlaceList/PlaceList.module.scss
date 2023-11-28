@@ -1,0 +1,57 @@
+@use '../../../assets/styles/scss/functions' as *;
+@use '../../../assets/styles/scss/variables' as *;
+
+.placeListWrap {
+    flex-grow: 1;
+    overflow-y: auto;
+
+    li {
+        display: flex;
+        margin-top: rem(20);
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .listNumber {
+            flex-shrink: 0;
+            width: rem(20);
+        }
+
+        .roadAddr {
+            .repIcon {
+                position: relative;
+                top: -1px;
+                display: inline-flex;
+                align-items: center;
+                height: rem(20);
+                padding: 0 rem(5);
+                margin-left: rem(4);
+                background: $c-primary;
+                border-radius: 2px;
+                font-size: rem(12);
+                color: #fff;
+            }
+        }
+
+        .lotAddr {
+            margin-top: rem(2);
+            font-size: rem(14);
+            color: #a7a7a7;
+        }
+
+        .btnArea {
+            margin-top: rem(12);
+            button {
+                margin-left: rem(4);
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    > ol + [class*='btnAddPinList'] {
+        margin-top: rem(20);
+    }
+}

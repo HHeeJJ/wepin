@@ -1,0 +1,71 @@
+@use '../../assets/styles/scss/functions' as *;
+
+.commentWrap {
+    padding-top: rem(12);
+
+    .btnMoreComment {
+        font-size: rem(14);
+        font-weight: 600;
+        color: #878b93;
+    }
+
+    .commentListWrap {
+        .commentList {
+            display: flex;
+            margin-top: rem(8);
+
+            .avatar {
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+            }
+
+            .txtArea {
+                padding-left: rem(10);
+                font-size: rem(15);
+            }
+
+            .userName {
+                .date {
+                    display: inline-block;
+                    margin-left: rem(4);
+                    font-size: rem(12);
+                    font-weight: 400;
+                    color: #a7a7a7;
+                }
+            }
+
+            .btnComment {
+                margin-top: rem(4);
+                font-size: rem(12);
+                color: #878b93;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .WriteCommentWrap {
+        position: relative;
+        margin-top: rem(8);
+        textarea {
+            width: 100%;
+            border-radius: 24px;
+            padding: rem(12) rem(50) rem(12) rem(12);
+            border: 1px solid #ebebeb;
+            font-size: rem(16);
+            resize: none;
+            vertical-align: top;
+            &::placeholder {
+                color: #ababab;
+            }
+        }
+        .btnCommentApply {
+            position: absolute;
+            right: rem(2);
+            bottom: 0;
+            padding: rem(12);
+            font-size: rem(14);
+            color: #297fff;
+        }
+    }
+}
