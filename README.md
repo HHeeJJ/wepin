@@ -1,6 +1,6 @@
 # 위핀(wepin)의 공개 코드 입니다.
 
-장소 공유 소셜 네트워크 서비스 **위핀(wepin)**입니다.
+장소 공유 소셜 네트워크 서비스 **위핀(wepin)** 입니다.
 
 ## 기능
 
@@ -24,4 +24,4 @@
 
 ## 앱 다운로드 링크
 
-<a href="https://wepin.imweb.me/" target="_blank">위핀(wepin)을 직접 다운로드 받아보세요! 😍 </a>
+[위핀(wepin)을 직접 다운로드 받아보세요! 😍] (https://wepin.imweb.me/)
