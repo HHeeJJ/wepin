@@ -22,7 +22,6 @@
     -  utils 함수
     -  PrivateRoutes
     -  Style (SASS, Styled-components)
-    -  
 
 <br/>
 
